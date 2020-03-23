@@ -1,5 +1,5 @@
 # Cake-Lua
-This Is The Lua Binding Of [Cake](https://github.com/Cake-Engine/Cake),A HTML5 Game Engine,The Binding Created By The Same Creator Of Cake Itself
+This Is The Lua Binding Of [Cake](https://github.com/Cake-Engine/Cake),A HTML5 Game Engine,The Binding Created By The Same Creator Of [Cake](https://github.com/Cake-Engine/Cake) Itself,Rabia Alhaffar
 
 ## Special Thanks
 
