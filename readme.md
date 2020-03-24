@@ -19,7 +19,7 @@ DrawRect(200,200,200,150,"dodgerblue")
 ```
 5. Get Back To The HTML File,Add:
 ```html
-<script src="game.lua"></script> <!-- Add It Below cake.lua -->
+<script src="game.lua" async></script> <!-- Add It Below cake.lua -->
 ```
 ## NOTES
 If Game And Cake Lua Binding Won't Work Due To CORS Error,Use Cake Lua Binding From Source,Import Functions You Need And Don't Need,With Importing `Unknown()` Function From `src/script/compiler.lua`
