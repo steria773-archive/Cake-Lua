@@ -2,7 +2,7 @@
 -- Copyright (c)2019-Present Rabia Alhaffar,All Rights Reserved!!!
 -- NOTES: You Need To Use Fengari Lua VM (JavaScript Library) For Using Cake In Lua
 -- Grab It Here: https://fengari.io
--- Build Date: 23/March/2020
+-- Build Date: 26/March/2020
 
 local js = require("js")
 local window = js.global
@@ -1981,29 +1981,158 @@ function Filter:Add()
 	cakecanvas.style.filter = cakecanvas.style.filter + " "..self.name.."("..self.filtervalue..") "
 end
 
--- Module: Audio
+-- Module: Media(Audio And Video)
+-- Audio
 PlayAudio = function(source)
-    game_song = window.document:createElement("audio")
-    game_song.src = source
-    game_song:play()
+    audio = window.document:createElement("audio")
+    audio.src = source
+    audio:play()
 end
 
 Music = { source = "" }
 function Music:new(source)
     setmetatable(Music, self)
     self.src = source
-    self.music = window.document:createElement("audio")
-    self.music.src = self.src
+    self.audio = window.document:createElement("audio")
+    self.audio.src = self.src
     return Music
 end
 function Music:Play()
-    self.music:play()
+    self.audio:play()
 end
 function Music:Pause()
-    self.music:pause()
+    self.audio:pause()
 end
 function Music:Resume()
-    self.music:play()
+    self.audio:play()
+end
+function Music:Reload()
+    self.audio:load()
+end
+function Music:SetVolume(v)
+    self.audio.volume = v
+end
+function Music:SetSource(src)
+    self.audio.src = src
+    self.audio:load()
+end
+function Music:ShowControls()
+    self.audio.controls = true
+end
+function Music:HideControls()
+    self.audio.controls = false
+end
+function Music:Mute()
+    self.audio.muted = true
+end
+function Music:UnMute()
+    self.audio.muted = false
+end
+function Music:EnableLoop()
+    self.audio.loop = true
+end
+function Music:DisableLoop()
+    self.audio.loop = false
+end
+function Music:paused()
+    return self.audio.paused
+end
+function Music:finished()
+    return self.audio.ended
+end
+function Music:muted()
+    return self.audio.muted
+end
+function Music:EnablePreload()
+    self.audio.preload = "auto"
+end
+function Music:DisablePreload()
+    self.audio.preload = "none"
+end
+
+-- Video
+PlayVideo = function(src)
+    video = window.document:createElement("video")
+    video.src = src
+    video.loop = false
+    cakepen:drawImage(video,0,0,cakecanvas.width,cakecanvas.height)
+    video.onended = function()
+        video.parentNode:removeChild(video)
+    end
+end
+
+Video = { source = "" }
+function Video:new(src)
+    setmetatable(Video, self)
+    self.src = src
+    self.video = window.document:createElement("video")
+    self.video.src = self.src
+    self.video.src = self.src
+    self.video.loop = false
+    self.video.controls = false
+    self.removeonfinish = false
+    return Video
+end
+function Video:Play()
+    if not self.video.autoplay then self.video:play() end
+    cakepen:drawImage(self.video,0,0,cakecanvas.width,cakecanvas.height) 
+    if self.removeonfinish then
+        self.video.onended = function()
+            self.video.parentNode:removeChild(self.video)
+        end
+    end
+end
+function Video:Pause()
+    self.video:pause()
+end
+function Video:Resume()
+    self.video:play()
+end
+function Video:Reload()
+    self.video:load()
+end
+function Video:SetVolume(v)
+    self.video.volume = v
+end
+function Video:SetSource(src)
+    self.video.src = src
+    self.video:load()
+end
+function Video:ShowControls()
+    self.video.controls = true
+end
+function Video:HideControls()
+    self.video.controls = false
+end
+function Video:Mute()
+    self.video.muted = true
+end
+function Video:UnMute()
+    self.video.muted = false
+end
+function Video:EnableLoop()
+    self.video.loop = true
+end
+function Video:DisableLoop()
+    self.video.loop = false
+end
+function Video:paused()
+    return self.video.paused
+end
+function Video:finished()
+    return self.video.ended
+end
+function Video:muted()
+    return self.video.muted
+end
+function Video:EnablePreload()
+    self.video.preload = "auto"
+end
+function Video:DisablePreload()
+    self.video.preload = "none"
+end
+function Video:RemoveWhenFinish()
+    self.removeonfinish = true
 end
 
 -- Module: Game Levels And window.update
