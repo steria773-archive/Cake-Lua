@@ -269,7 +269,7 @@ DrawPolygon = function(points,color,stroke_color,alpha)
     cakepen.fillStyle = color
     cakepen.strokeStyle = stroke_color
     cakepen:beginPath()
-    cakepen:moveTo(points[1][1], points[1][2]);
+    cakepen:moveTo(points[1][1], points[1][2])
     for i in pairs(points) do
         cakepen:lineTo(points[i + 1][1],points[i + 1][2])
     end
@@ -310,7 +310,7 @@ DrawPolygonLineSides = function(x,y,size,sides,color,stroke_color,start_angle,en
 end
 
 DrawTexture = function(source,x,y,width,height,alpha)
-    texture = document:createElement("image")
+    texture = window:eval("new Image();")
     texture.src = source
 	if Unknown(x) then x = 0 end
 	if Unknown(y) then y = 0 end
@@ -388,9 +388,9 @@ DrawSuperFilledGrid = function(gridsize,alpha)
     for i = 0,grid_loop_height,1 do
         for z = 0,grid_loop_width,1 do
             cakepen.fillStyle = RandomColor()
-			cakepen.fillRect(x,y,gridsize,gridsize);
+			cakepen.fillRect(x,y,gridsize,gridsize)
 			cakepen.fillStyle = RandomColor()
-			cakepen.fillRect(x + gridsize,y,gridsize,gridsize);
+			cakepen.fillRect(x + gridsize,y,gridsize,gridsize)
 			x = x + gridsize
         end
         x = 0
@@ -428,7 +428,7 @@ DrawPixel = function(x,y,size,color,alpha,show_grid)
     cakepen.globalAlpha = alpha
     cakepen.fillStyle = color
     cakepen.strokeStyle = "black"
-	cakepen:fillRect(x,y,size,size);
+	cakepen:fillRect(x,y,size,size)
     if show_grid then
         cakepen:strokeRect(x,y,size,size)
     end	
@@ -496,8 +496,8 @@ CreateCanvas = function(width,height,bgcolor,border_style)
     _canvas.height = height
     _canvas.width = width
     _canvas.style.backgroundColor = bgcolor
-    _canvas.style.border = border_style;
-	document.body:appendChild(_canvas);
+    _canvas.style.border = border_style
+	document.body:appendChild(_canvas)
 end
 
 CreateGame = function(context,width,height,gametitle)
@@ -674,7 +674,7 @@ DrawEllipse = function(x,y,radius,color,stroke_color,rotation,start_angle,end_an
     cakepen.globalAlpha = alpha
     cakepen.fillStyle = color
     cakepen.strokeStyle = stroke_color
-	cakepen:ellipse(x,y,radius,radius,rotation,start_angle,end_angle * math.pi,false);
+	cakepen:ellipse(x,y,radius,radius,rotation,start_angle,end_angle * math.pi,false)
 end
 Cut = function()
     cakepen:clip()
@@ -871,8 +871,8 @@ DrawGradientRect = function(x,y,width,height,content,alpha)
         cakepen:strokeRect(x,y,width,height)
     end
     if mode == "custom" then
-        cakepen:fillRect(x,y,width,height);
-		cakepen:strokeRect(x,y,width,height);
+        cakepen:fillRect(x,y,width,height)
+		cakepen:strokeRect(x,y,width,height)
     end
     
 end
@@ -1083,8 +1083,8 @@ DrawArrays = function(type,content)
                 cakepen:strokeText(content[i + 1][3],content[i + 1][1],content[i + 1][2])
             end
             if mode == "custom" then
-				cakepen.fillText(content[i + 1][2],content[i + 1][0],content[i + 1][1]);
-				cakepen.strokeText(content[i + 1][2],content[i + 1][0],content[i + 1][1]);
+				cakepen.fillText(content[i + 1][2],content[i + 1][0],content[i + 1][1])
+				cakepen.strokeText(content[i + 1][2],content[i + 1][0],content[i + 1][1])
 			end	
 		end
     end
@@ -1098,7 +1098,7 @@ DrawArrays = function(type,content)
 			if Unknown(content[i + 1][5]) then content[i + 1][5] = 0 end
 			if Unknown(content[i + 1][6]) then content[i + 1][6] = "black" end
 			if Unknown(content[i + 1][7]) then content[i + 1][7] = "black" end
-			if Unknown(content[i + 1][8]) then content[i + 1][8] = 1;
+			if Unknown(content[i + 1][8]) then content[i + 1][8] = 1
 			cakepen.fillStyle = content[i + 1][6]
 			cakepen.strokeStyle = content[i + 1][7]
 			cakepen.globalAlpha = content[i + 1][8]
@@ -1106,7 +1106,7 @@ DrawArrays = function(type,content)
 			cakepen:moveTo(content[i + 1][1] + content[i + 1][5],content[i + 1][2])
 			cakepen:lineTo(content[i + 1][1] + content[i + 1][3] - content[i + 1][5],content[i + 1][2])
 			cakepen:quadraticCurveTo(content[i + 1][1] + content[i + 1][3],content[i + 1][2],content[i + 1][1] + content[i + 1][3],content[i + 1][2] + content[i + 1][5])
-			cakepen:lineTo(content[i + 1][1] + content[i + 1][3],content[i + 1][2] + content[i + 1][4] - content[i + 1][5]);
+			cakepen:lineTo(content[i + 1][1] + content[i + 1][3],content[i + 1][2] + content[i + 1][4] - content[i + 1][5])
 			cakepen:quadraticCurveTo(content[i + 1][1] + content[i + 1][3],content[i + 1][2] + content[i + 1][4],content[i + 1][1] + content[i + 1][3] - content[i + 1][5],content[i + 1][2] + content[i + 1][4])
 			cakepen:lineTo(content[i + 1][1] + content[i + 1][5],content[i + 1][2] + content[i + 1][4])
 			cakepen:quadraticCurveTo(content[i + 1][1],content[i + 1][3] + content[i + 1][4],content[i + 1][1],content[i + 1][2] + content[i + 1][4] - content[i + 1][5])
