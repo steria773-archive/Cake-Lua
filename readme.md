@@ -24,6 +24,8 @@ DrawRect(200,200,200,150,"dodgerblue")
 ## NOTES
 If Game And Cake Lua Binding Won't Work Due To CORS Error,Use Cake Lua Binding From Source,Import Functions You Need And Don't Need,With Importing `Unknown()` Function From `src/script/compiler.lua`
 
+> NOTES: Functions When Imported Should Be With The Source Code Of The Imported Function,Don't Use `require()` Cause It Will Do Nothing!!!
+
 ## Special Thanks
 1. B. Giannangeli And Daurnimator For [Fengari](https://fengari.io)
 2. PUC-Rio For [Lua](https://lua.org)
