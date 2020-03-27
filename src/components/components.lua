@@ -849,7 +849,7 @@ function Texture:new(url,x,y,width,height,autoupdate)
     self.autoupdate = autoupdate
     self.y = y
     self.height = width
-    self.img = document:createElement("image")
+    self.img = window:eval("new Image();")
     self.img.src = url
     self.width = height
     self.h = self.height
