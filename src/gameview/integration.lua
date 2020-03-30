@@ -21,103 +21,102 @@ IntegrateWith = function(engine)
     end
 
     if engine == "blocksjs" then
-        cakecanvas = canvasElement
-        cakepen = layer.ctx
+        cakecanvas = window:eval("canvasElement")
+        cakepen = window:eval("layer.ctx")
     end
 
     if engine == "booty" then
-        b5.Display.canvas = cakecanvas
-        b5.Display.context = cakepen
-        cake = b5
+        window:eval("b5.Display.canvas = cakecanvas;")
+        window:eval("b5.Display.context = cakepen;")
+        cake = window:eval("b5")
     end
 
     if engine == "cartridge" then
-        canvas = cakecanvas
-        ctx = cakepen
+        window:eval("canvas = cakecanvas;")
+        window:eval("ctx = cakepen;");
     end
 
     if engine == "easel" then
-        canvas = cakecanvas
-        Graphics._ctx = cakepen
+        window:eval("canvas = cakecanvas;")
+        window:eval("Graphics._ctx = cakepen")
     end
 
     if engine == "pixi" then
-        PIXI.Graphics = cakepen
-        cake = PIXI
+        window:eval("PIXI.Graphics = cakepen;")
+        cake = window:eval("PIXI")
     end
 
     if engine == "iio" then
-        iio = cake
+        window:eval("iio = cake;")
     end
 
     if engine == "quark" then
-        cake = Quark
-        Quark._helpContext.canvas = cakecanvas
-        Quark._helpContext.context = cakepen
+        cake = window:eval("Quark")
+        window:eval("Quark._helpContext.canvas = cakecanvas;")
+        window:eval("Quark._helpContext.context = cakepen;")
     end
 
     if engine == "quintus" then
-        cake = Q
-        Q.ctx.canvas = cakecanvas
-        Q.ctx = cakepen
+        cake = window:eval("Q")
+        window:eval("Q.ctx.canvas = cakecanvas;")
+        window:eval("Q.ctx = cakepen;")
     end
 
     if engine == "simplegameengine" then
-        cakecanvas = _tempCanvas2D.canvas
-        cakepen = _tempCanvas2D
+        cakecanvas = window:eval("_tempCanvas2D.canvas")
+        cakepen = window:eval("_tempCanvas2D")
     end
 
     if engine == "oversimplified" then
-        cake = Oversimplified
-        Oversimplified.canvas = cakecanvas
-        Oversimplified.context = cakepen
+        cake = window:eval("Oversimplified")
+        window:eval("Oversimplified.canvas = cakecanvas;")
+        window:eval("Oversimplified.context = cakepen;")
     end
 
     if engine == "joy" then
-        cake = Joy
-        Joy.currentEngine.context.canvas = cakecanvas
-        Joy.currentEngine.context.ctx = cakepen
+        cake = window:eval("Joy")
+        window:eval("Joy.currentEngine.context.canvas = cakecanvas;")
+        window:eval("Joy.currentEngine.context.ctx = cakepen;")
     end
 
     if engine == "gamvas" then 
-        cake = gamvas
-        gamvas._canvas = cakecanvas
-        gamvas._context2D = cakepen
+        cake = window:eval("gamvas")
+        window:eval("gamvas._canvas = cakecanvas;")
+        window:eval("gamvas._context2D = cakepen;")
     end
 
     if engine == "nini" then
-        Graphics.canvas = cakecanvas
-        cakepen = Graphics.canvas:getContext("2d")
+        window:eval("Graphics.canvas = cakecanvas;")
+        window:eval([[cakepen = Graphics.canvas:getContext("2d")]])
     end
 
     if engine == "squarepig" then
-        pig.canvas = cakecanvas
-        pig.context = cakepen
-        cake = pig
+        window:eval("pig.canvas = cakecanvas;")
+        window:eval("pig.context = cakepen;")
+        cake = window:eval("pig")
     end
 
     if engine == "threejs" then
-        THREE = cake
+        window:eval("THREE = cake;")
     end
 
     if engine == "hilo" then
-        cake = Hilo
+        cake = window:eval("Hilo")
     end
 
     if engine == "hilo3d" then
-        cake = Hilo3d
+        cake = window:eval("Hilo3d")
     end
 
     if engine == "stage" then
-        cake = Stage
-        ctx = cakepen
-        stage = cakecanvas
+        cake = window:eval("Stage")
+        window:eval("ctx = cakepen;")
+        window:eval("stage = cakecanvas;")
     end
 
     if engine == "arcadejs" then
-        cake = ArcadeJS
-        ArcadeJS._firstGame.canvas = cakecanvas
-        ArcadeJS._firstGame.context = cakepen
+        cake = window:eval("ArcadeJS")
+        window:eval("ArcadeJS._firstGame.canvas = cakecanvas;")
+        window:eval("ArcadeJS._firstGame.context = cakepen;")
     end
-
 end
