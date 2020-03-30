@@ -2,7 +2,7 @@
 -- Copyright (c)2019-Present Rabia Alhaffar,All Rights Reserved!!!
 -- NOTES: You Need To Use Fengari Lua VM (JavaScript Library) For Using Cake In Lua
 -- Grab It Here: https://fengari.io
--- Build Date: 26/March/2020
+-- Build Date: 30/March/2020
 
 local js = require("js")
 local window = js.global
@@ -73,40 +73,175 @@ PSKey =
     Right = 15
 }
 
--- TV Keys (Tested Well On Panasonic Remotes)
-TVKey = 
+-- TV Keys (Tested Well On Panasonic,Smart TV Remotes)
+TVKey =
 {
-    Up = 38,
-    Down = 40,
-    Left = 37,
-    Right = 39,
-    ChannelUp = 516,
-    ChannelDown = 517,
-    Enter = 13,
-    Aspect = 642,
-    Info = 615,
-    Return = 8,
-    Option = 623,
-    Zero = 48,
-    One = 49,
-    Two = 50,
-    Three = 51,
-    Four = 52,
-    Five = 53,
-    Six = 54,
-    Seven = 55,
-    Eight = 56,
-    Nine = 57,
-    LastView = 651,
-    Play = 250,
-    Pause = 19,
-    Stop = 178,
-    Record = 603,
-    Next = 228,
-    Previous = 227,
-    SkipToNext = 176,
-    SkipToPrevious = 177
-}
+    Panasonic =
+    {
+        Up = 38,
+        Down = 40,
+        Left = 37,
+        Right = 39,
+        ChannelUp = 516,
+        ChannelDown = 517,
+        F0 = 588,
+        F1 = 589,
+        F2 = 590,
+        F3 = 591,
+        Enter = 13,
+        Aspect = 642,
+        Info = 615,
+        Return = 8,
+        Option = 623,
+        ZERO = 48,
+        ONE = 49,
+        TWO = 50,
+        THREE = 51,
+        FOUR = 52,
+        FIVE = 53,
+        SIX = 54,
+        SEVEN = 55,
+        EIGHT = 56,
+        NINE = 57,
+        LastView = 651,
+        Play = 250,
+        Pause = 19,
+        Stop = 178,
+        Record = 603,
+        SkipToNext = 176,
+        SkipToPrevious = 177,
+        Next = 228,
+        Previous = 227
+    },
+    Tizen =
+    {
+        Up = 38,
+        Down = 40,
+        Left = 37,
+        Right = 39,
+        Enter = 13,
+        Back = 10009,
+        VolumeUp = 447,
+        VolumeDown = 448,
+        VolumeMute = 449,
+        ChannelUp = 427,
+        ChannelDown = 428,
+        ChannelList = 10073,
+        F0 = 403,
+        F1 = 404,
+        F2 = 405,
+        F3 = 406,
+        MediaPlayPause = 10252,
+        MediaRewind = 412,
+        MediaFastForward = 417,
+        MediaPlay = 415,
+        MediaPause = 19,
+        MediaStop = 413,
+        MediaRecord = 416,
+        MediaTrackPrevious = 10232,
+        MediaTrackNext = 10233,
+        ZERO = 48,
+        ONE = 49,
+        TWO = 50,
+        THREE = 51,
+        FOUR = 52,
+        FIVE = 53,
+        SIX = 54,
+        SEVEN = 55,
+        EIGHT = 56,
+        NINE = 57,
+        Minus = 189,
+        PreviousChannel = 10190,
+        Menu = 18,
+        Tools = 10135,
+        Info = 457,
+        Source = 10072,
+        Exit = 10182,
+        Caption = 10221,
+        EManual = 10146,
+        _3D = 10199,
+        Extra = 10253,
+        PictureSize = 10140,
+        Soccer = 10228,
+        Teletext = 10200,
+        MTS = 10195,
+        Search = 10225,
+        Guide = 458 
+    },
+    WebOS =
+    {
+        Up = 0x26,
+        Down = 0x28,
+        Left = 0x25,
+        Right = 0x27,
+        OK = 0x0D,
+        Back = 0x1CD,
+        F0 = 0x193,
+        F1 = 0x194,
+        F2 = 0x195,
+        F3 = 0x196
+    },
+    LG_HDCP =
+    {
+        Power = 0x08,
+        Energy = 0x95,
+        AV = 0x30,
+        Input = 0x0B,
+        TVRAD = 0xF0,
+        ZERO = 0x10,
+        ONE = 0x11,
+        TWO = 0x12,
+        THREE = 0x13,
+        FOUR = 0x14,
+        FIVE = 0x15,
+        SIX = 0x16,
+        SEVEN = 0x17,
+        EIGHT = 0x18,
+        NINE = 0x19,
+        List = 0x53,
+        QView = 0x1A,
+        VolumeUp = 0x02,
+        VolumeDown = 0x03,
+        Favorites = 0x1E,
+        Ratio = 0x79,
+        Mute = 0x09,
+        ChannelUp = 0x00,
+        ChannelDown = 0x01,
+        Menu = 0x43,
+        Home = 0x23,
+        Widgets = 0x58,
+        Netcast = 0x59,
+        QMenu = 0x45,
+        _3D = 0xDC,
+        Up = 0x40,
+        Down = 0x41,
+        Left = 0x07,
+        Right = 0x06,
+        OK = 0x44,
+        Back = 0x28,
+        Guide = 0xA9,
+        Exit = 0x5B,
+        F0 = 0x72,
+        F1 = 0x71,
+        F2 = 0x63,
+        F3 = 0x61,
+        _3DSetup = 0x61,
+        Text = 0x20,
+        TextOptions = 0x21,
+        Subtitles = 0x39,
+        LiveTV = 0x9E,
+        Record = 0xBD,
+        Stop = 0xB1,
+        Play = 0xB0,
+        Pause = 0xBA,
+        Next = 0x8E,
+        Previous = 0x8F,
+        Simplink = 0x7E,
+        Info = 0xAA,
+        App = 0x9F,
+        AD =91
+    }
+};
 
 KeyboardKey = 
 {
@@ -497,10 +632,8 @@ SetShadowProperties = function(shadowOffsetX,shadowOffsetY,shadowcolor,shadowblu
     cakepen.shadowBlur = shadowblur
 end
 
-SetLineProperties = function(line_width,line_height)
-    if Unknown(line_height) then line_height = 1 end
+SetLineProperties = function(line_width)
     if Unknown(line_width) then line_width = 1 end
-    cakepen.lineHeight = line_height
     cakepen.lineWidth = line_width
 end
 
@@ -772,7 +905,7 @@ Transform = function(a,b,mode)
     if mode == "scale" then cakepen:scale(a,b) end
 end
 
-RemoveAlpha = function()
+ClearAlpha = function()
     cakepen.globalAlpha = 0
 end
 
@@ -1100,6 +1233,7 @@ DrawEllipse = function(x,y,radius,color,stroke_color,rotation,start_angle,end_an
     cakepen.strokeStyle = stroke_color
 	cakepen:ellipse(x,y,radius,radius,rotation,start_angle,end_angle * math.pi,false)
 end
+
 Cut = function()
     cakepen:clip()
 end	
@@ -1575,119 +1709,103 @@ Shear = function(x,y)
 	cakepen:shear(x,y)
 end
 
-ClearShadows = function()
-	if Safari then cakepen:clearShadow() end
+SetCanvasBackground = function(bg)
+    cakecanvas.style.background = bg
+end
+
+RemoveCanvasBackground = function()
+    cakecanvas.style.background = "none"
 end
 
 -- Module: CanvasRenderingContext2D
 -- Sorry But I Needed This Backend From CanvasRenderingContext2D.js
 window:eval([[
-if(!CanvasRenderingContext2D.prototype.cc) 
+    if(!CanvasRenderingContext2D.prototype.clear) 
 {
-    CanvasRenderingContext2D.prototype.cc = function() 
+    CanvasRenderingContext2D.prototype.clear = function() 
     {
         this.clearRect(0,0,this.canvas.width,this.canvas.height);
     };
 }
-CanvasRenderingContext2D.prototype.clear = function()
+
+if(!CanvasRenderingContext2D.prototype.fillCircle)
 {
-    this.cc();
-};
-if(!CanvasRenderingContext2D.prototype.fc)
-{
-    CanvasRenderingContext2D.prototype.fc = function(x,y,radius)
+    CanvasRenderingContext2D.prototype.fillCircle = function(x,y,radius)
     {
         this.beginPath();
         this.arc(x,y,radius,90,180 * Math.PI);
+        this.closePath();
         this.fill();
-        this.closePath();
     };
 }
-CanvasRenderingContext2D.prototype.fillCircle = function(x,y,radius) 
-{ 
-    this.fc(x,y,radius); 
-};
-if(!CanvasRenderingContext2D.prototype.sc)
+
+if(!CanvasRenderingContext2D.prototype.strokeCircle)
 {
-    CanvasRenderingContext2D.prototype.sc = function(x,y,radius)
+    CanvasRenderingContext2D.prototype.strokeCircle = function(x,y,radius)
     {
         this.beginPath();
         this.arc(x,y,radius,90,180 * Math.PI);
-        this.stroke();
         this.closePath();
+        this.stroke();
     };
 }
-CanvasRenderingContext2D.prototype.strokeCircle = function(x,y,radius) 
-{ 
-    this.sc(x,y,radius); 
-};
-if(!CanvasRenderingContext2D.prototype.ft)
+
+
+if(!CanvasRenderingContext2D.prototype.fillTriangle)
 {
-    CanvasRenderingContext2D.prototype.ft = function(x1,y1,x2,y2,x3,y3)
+    CanvasRenderingContext2D.prototype.fillTriangle = function(x1,y1,x2,y2,x3,y3)
     {
         this.beginPath();
         this.moveTo(x1,y1);
         this.lineTo(x2,y2);
         this.lineTo(x3,y3);
         this.lineTo(x1,y1);
-        this.fill();
         this.closePath();
+        this.fill();
     };
 }
-CanvasRenderingContext2D.prototype.fillTriangle = function(x1,y1,x2,y2,x3,y3) 
-{ 
-    this.ft(x1,y1,x2,y2,x3,y3); 
-};
-if(!CanvasRenderingContext2D.prototype.st)
+
+if(!CanvasRenderingContext2D.prototype.strokeTriangle)
 {
-    CanvasRenderingContext2D.prototype.st = function(x1,y1,x2,y2,x3,y3)
+    CanvasRenderingContext2D.prototype.strokeTriangle = function(x1,y1,x2,y2,x3,y3)
     {
         this.beginPath();
         this.moveTo(x1,y1);
         this.lineTo(x2,y2);
         this.lineTo(x3,y3);
         this.lineTo(x1,y1);
-        this.stroke();
         this.closePath();
+        this.stroke();
     };
 }
-CanvasRenderingContext2D.prototype.strokeTriangle = function(x1,y1,x2,y2,x3,y3)
+
+if(!CanvasRenderingContext2D.prototype.fillPolygon)
 {
-    this.st(x1,y1,x2,y2,x3,y3);
-};
-if(!CanvasRenderingContext2D.prototype.fp)
-{
-    CanvasRenderingContext2D.prototype.fp = function(points)
+    CanvasRenderingContext2D.prototype.fillPolygon = function(points)
     {
         this.beginPath();
         this.moveTo(points[0][0], points[0][1]);
-        for(var i = 0; i < points.length; i++) this.lineTo(points[i][0], points[i][1]);
+    for(var i = 0; i < points.length; i++) this.lineTo(points[i][0], points[i][1]);
+        this.closePath();
         this.fill();
-        this.closePath();
     };
 }
-CanvasRenderingContext2D.prototype.fillPolygon = function(points)
+
+if(!CanvasRenderingContext2D.prototype.strokePolygon)
 {
-    this.fp(points);
-};
-if(!CanvasRenderingContext2D.prototype.sp)
-{
-    CanvasRenderingContext2D.prototype.sp = function(points)
+    CanvasRenderingContext2D.prototype.strokePolygon = function(points)
     {
         this.beginPath();
         this.moveTo(points[0][0], points[0][1]);
-        for(var i = 0; i < points.length; i++) this.lineTo(points[i][0], points[i][1]);
-        this.stroke();
+    for(var i = 0; i < points.length; i++) this.lineTo(points[i][0], points[i][1]);
         this.closePath();
+        this.stroke();
     };
 }
-CanvasRenderingContext2D.prototype.strokePolygon = function(points)
+
+if(!CanvasRenderingContext2D.prototype.fillRoundedRect)
 {
-    this.sp(points);
-};
-if(!CanvasRenderingContext2D.prototype.frr)
-{
-    CanvasRenderingContext2D.prototype.frr = function(x,y,width,height,radius)
+    CanvasRenderingContext2D.prototype.fillRoundedRect = function(x,y,width,height,radius)
     {
         this.beginPath();
         this.moveTo(x + radius,y);
@@ -1699,17 +1817,14 @@ if(!CanvasRenderingContext2D.prototype.frr)
         this.quadraticCurveTo(x,y + height,x,y + height - radius);
         this.lineTo(x,y + radius);
         this.quadraticCurveTo(x,y,x + radius,y);
-        this.fill();
         this.closePath();
+        this.fill();
     };
 }
-CanvasRenderingContext2D.prototype.fillRoundedRect = function(x,y,width,height,radius)
+
+if(!CanvasRenderingContext2D.prototype.strokeRoundedRect)
 {
-    this.frr(x,y,width,height,radius);
-};
-if(!CanvasRenderingContext2D.prototype.srr)
-{
-    CanvasRenderingContext2D.prototype.srr = function(x,y,width,height,radius)
+    CanvasRenderingContext2D.prototype.strokeRoundedRect = function(x,y,width,height,radius)
     {
         this.beginPath();
         this.moveTo(x + radius,y);
@@ -1721,136 +1836,111 @@ if(!CanvasRenderingContext2D.prototype.srr)
         this.quadraticCurveTo(x,y + height,x,y + height - radius);
         this.lineTo(x,y + radius);
         this.quadraticCurveTo(x,y,x + radius,y);
-        this.stroke();
         this.closePath();
+        this.stroke();
     };
 }
-CanvasRenderingContext2D.prototype.strokeRoundedRect = function(x,y,width,height,radius)
+
+if(!CanvasRenderingContext2D.prototype.fillAndStroke)
 {
-    this.srr(x,y,width,height,radius);
-};
-if(!CanvasRenderingContext2D.prototype.fas)
-{
-    CanvasRenderingContext2D.prototype.fas = function()
+    CanvasRenderingContext2D.prototype.fillAndStroke = function()
     {
         this.fill();
         this.stroke();
     };
 }
-CanvasRenderingContext2D.prototype.fillAndStroke = function()
+
+if(!CanvasRenderingContext2D.prototype.blur) 
 {
-    this.fas();
-};
-if(!CanvasRenderingContext2D.prototype.blu) 
-{
-    CanvasRenderingContext2D.prototype.blu = function(px) 
+    CanvasRenderingContext2D.prototype.blur = function(px) 
     { 
         this.canvas.style.filter += " blur(" + px + "px) "; 
     };
 }
-CanvasRenderingContext2D.prototype.blur = function(px)
+
+if(!CanvasRenderingContext2D.prototype.bright) 
 {
-    this.blu(px);
-};
-if(!CanvasRenderingContext2D.prototype.brightness) 
-{
-    CanvasRenderingContext2D.prototype.brightness = function(percentage) 
+    CanvasRenderingContext2D.prototype.bright = function(percentage) 
     {
         this.canvas.style.filter += " brightness(" + percentage + "%) ";
     };
 }
-CanvasRenderingContext2D.prototype.bright = function(percentage)
+
+if(!CanvasRenderingContext2D.prototype.contrast) 
 {
-    this.brightness(percentage);
-};
-if(!CanvasRenderingContext2D.prototype.contras) 
-{
-    CanvasRenderingContext2D.prototype.contras = function(percentage) 
+    CanvasRenderingContext2D.prototype.contrast = function(percentage) 
     {
         this.canvas.style.filter += " contrast(" + percentage + "%) ";
     };
 }
-CanvasRenderingContext2D.prototype.contrast = function(percentage)
+
+
+if(!CanvasRenderingContext2D.prototype.invert) 
 {
-    this.contras(percentage);
-};
-if(!CanvasRenderingContext2D.prototype.inv) 
-{
-    CanvasRenderingContext2D.prototype.inv = function(percentage)
+    CanvasRenderingContext2D.prototype.invert = function(percentage)
     {
         this.canvas.style.filter += " invert(" + percentage + "%) ";
     };
 }
-CanvasRenderingContext2D.prototype.invert = function(percentage)
+
+
+if(!CanvasRenderingContext2D.prototype.grayscale) 
 {
-    this.inv(percentage);
-};
-if(!CanvasRenderingContext2D.prototype.grace) 
-{
-    CanvasRenderingContext2D.prototype.grace = function(percentage)
+    CanvasRenderingContext2D.prototype.grayscale = function(percentage)
     {
         this.canvas.style.filter += " grayscale(" + percentage + "%) ";
     };
 }
-CanvasRenderingContext2D.prototype.grayscale = function(percentage)
+
+if(!CanvasRenderingContext2D.prototype.opacity) 
 {
-    this.grace(percentage);
-};
-if(!CanvasRenderingContext2D.prototype.opal) 
-{
-    CanvasRenderingContext2D.prototype.opal = function(percentage) 
+    CanvasRenderingContext2D.prototype.opacity = function(percentage) 
     {
         this.canvas.style.filter += " opacity(" + percentage + "%) ";
     };
 }
-CanvasRenderingContext2D.prototype.opacity = function(percentage)
+
+if(!CanvasRenderingContext2D.prototype.saturate) 
 {
-    this.opal(percentage);
-};
-if(!CanvasRenderingContext2D.prototype.sat) 
-{
-    CanvasRenderingContext2D.prototype.sat = function(percentage)
+    CanvasRenderingContext2D.prototype.saturate = function(percentage)
     {
         this.canvas.style.filter += " saturate(" + percentage + "%) ";
     };
 }
-CanvasRenderingContext2D.prototype.saturate = function(percentage)
+
+if(!CanvasRenderingContext2D.prototype.sepia) 
 {
-    this.sat(percentage);
-};
-if(!CanvasRenderingContext2D.prototype.spyro) 
-{
-    CanvasRenderingContext2D.prototype.spyro = function(percentage)
+    CanvasRenderingContext2D.prototype.sepia = function(percentage)
     {
         this.canvas.style.filter += " sepia(" + percentage + "%) ";
     };
 }
-CanvasRenderingContext2D.prototype.sepia = function(percentage)
+
+if(!CanvasRenderingContext2D.prototype.rotateHue) 
 {
-    this.spyro(percentage);
-};
-if(!CanvasRenderingContext2D.prototype.roue) 
-{
-    CanvasRenderingContext2D.prototype.roue = function(percentage) 
+    CanvasRenderingContext2D.prototype.rotateHue = function(percentage) 
     {
         this.canvas.style.filter += " hue-rotate(" + percentage + "%) ";
     };
 }
-CanvasRenderingContext2D.prototype.rotateHue = function(percentage)
+
+if(!CanvasRenderingContext2D.prototype.setFilters) 
 {
-    this.roue(percentage);
-};
-if(!CanvasRenderingContext2D.prototype.applyFilters) 
-{
-    CanvasRenderingContext2D.prototype.applyFilters = function(filters)
+    CanvasRenderingContext2D.prototype.setFilters = function(filters)
     {
         this.canvas.style.filter = filters.toString();
     };
 }
-CanvasRenderingContext2D.prototype.setFilters = function(filters)
+
+if(!CanvasRenderingContext2D.prototype.applyFilters) 
 {
-    this.applyFilters(filters);
-};
+    CanvasRenderingContext2D.prototype.applyFilters = function(filters)
+    {
+        this.canvas.style.filter += filters.toString();
+    };
+}
+
+
 if(!CanvasRenderingContext2D.prototype.clearFilters) 
 {
     CanvasRenderingContext2D.prototype.clearFilters = function()
@@ -1858,76 +1948,103 @@ if(!CanvasRenderingContext2D.prototype.clearFilters)
         this.canvas.style.filter = "none";
     };
 }
-CanvasRenderingContext2D.prototype.removeFilters = function()
+
+if(!CanvasRenderingContext2D.prototype.fillSquare) 
 {
-    this.clearFilters();
-};
-if(!CanvasRenderingContext2D.prototype.flis) 
-{
-    CanvasRenderingContext2D.prototype.flis = function(x,y,size)
+    CanvasRenderingContext2D.prototype.fillSquare = function(x,y,size)
     {
         this.fillRect(x,y,size,size);
     };
 }
-CanvasRenderingContext2D.prototype.fillSquare = function(x,y,size)
+
+if(!CanvasRenderingContext2D.prototype.strokeSquare) 
 {
-    this.flis(x,y,size);
-};
-if(!CanvasRenderingContext2D.prototype.slis) 
-{
-    CanvasRenderingContext2D.prototype.slis = function(x,y,size)
+    CanvasRenderingContext2D.prototype.strokeSquare = function(x,y,size)
     {
         this.strokeRect(x,y,size,size);
     };
-}        
-CanvasRenderingContext2D.prototype.strokeSquare = function(x,y,size)
+}      
+
+if(!CanvasRenderingContext2D.prototype.hideCanvas) 
 {
-    this.slis(x,y,size);
-};
-if(!CanvasRenderingContext2D.prototype.hoco) 
-{
-    CanvasRenderingContext2D.prototype.hoco = function()
+    CanvasRenderingContext2D.prototype.hideCanvas = function()
     {
         this.canvas.style.visibility = "hidden";
     };
 }
-CanvasRenderingContext2D.prototype.hideCanvas = function()
+
+
+if(!CanvasRenderingContext2D.prototype.showCanvas) 
 {
-    this.hoco();
-};
-if(!CanvasRenderingContext2D.prototype.sirocco) 
-{
-    CanvasRenderingContext2D.prototype.sirocco = function()
+    CanvasRenderingContext2D.prototype.showCanvas = function()
     {
         this.canvas.style.visibility = "visible";
     };
 }
-CanvasRenderingContext2D.prototype.showCanvas = function()
+
+if(!CanvasRenderingContext2D.prototype.removeCanvas) 
 {
-    this.sirocco();
-};
-if(!CanvasRenderingContext2D.prototype.rocco) 
-{
-    CanvasRenderingContext2D.prototype.rocco = function()
+    CanvasRenderingContext2D.prototype.removeCanvas = function()
     {
         this.canvas.parentNode.removeChild(this.canvas);
     };
 }
-CanvasRenderingContext2D.prototype.removeCanvas = function()
+
+if(!CanvasRenderingContext2D.prototype.shear)
 {
-    this.rocco();
-};
-if(!CanvasRenderingContext2D.prototype.sxsy)
-{
-    CanvasRenderingContext2D.prototype.sxsy = function(sx,sy)
+    CanvasRenderingContext2D.prototype.shear = function(sx,sy)
     {
         this.transform(1,sy,sx,1,0,0);
     };
 }
-CanvasRenderingContext2D.prototype.shear = function(shear_x,shear_y)
+
+if(!CanvasRenderingContext2D.prototype.flipHorizontally)
 {
-    this.sxsy(shear_x,shear_y);
-};
+    CanvasRenderingContext2D.prototype.flipHorizontally = function()
+    {
+        this.scale(-1,1);
+    };
+}
+
+
+if(!CanvasRenderingContext2D.prototype.flipVertically)
+{
+    CanvasRenderingContext2D.prototype.flipVertically = function()
+    {
+        this.scale(1,-1);
+    };
+}
+
+if(!CanvasRenderingContext2D.prototype.flipContent)
+{
+    CanvasRenderingContext2D.prototype.flipContent = function()
+    {
+        this.scale(-1,-1);
+    };
+}
+
+
+if(!CanvasRenderingContext2D.prototype.resetFlipping)
+{
+    CanvasRenderingContext2D.prototype.resetFlipping = function()
+    {
+        this.scale(1,1);
+    };
+}
+
+if(!CanvasRenderingContext2D.prototype.line)
+{
+    CanvasRenderingContext2D.prototype.line = function(x1,y1,x2,y2,size)
+    {
+        this.lineWidth = size;
+        this.beginPath();
+        this.moveTo(x1,y1);
+        this.lineTo(x2,y2);
+        this.closePath();
+        this.stroke();
+    };
+}
+
 ]])
 
 -- Module: Filters
@@ -3789,6 +3906,34 @@ function RoundedRect:Resize(width,height)
     self.height = height
 end
 
+-- Module: Execution
+scripts_added = 0
+
+Execute = function(code,loop,ms)
+    if loop == 0 then window:setTimeout(code,0) end
+    if loop == 1 then window:setTimeout(code,ms) end
+    if loop == 2 then window:setInterval(code,0) end
+    if loop == 3 then window:setInterval(code,ms) end
+end
+
+Import = function(script_source)
+    script = document:createElement("script")
+    script.src = tostring(script_source)
+    script.type = "application/lua"
+    script.async = true
+    head = document:getElementsByTagName('head')
+    head:appendChild(script)
+end
+
+AddJavaScript = function(script_source)
+    script = document:createElement("script")
+    script.src = tostring(script_source)
+    script.type = "text/javascript"
+    script.defer = true
+    document:getElementsByTagName('head')[scripts_added]:appendChild(script)
+    scripts_added = scripts_added + 1
+end
+
 -- Module: Game (Game Actions)
 RestartGame = function()
     window.location:reload()
@@ -3811,7 +3956,7 @@ end
 StartProcess = function(dir)
     window:open("file:///"..tostring(dir))
 end
-UpdateCake = function()
+UpdateEngine = function()
     cake_engine = document:createElement("script")
     cake_engine.src = "https://cdn.jsdelivr.net/gh/Cake-Engine/Cake@master/build/cake.js"
     cake_engine.type = 'text/javascript'
@@ -3889,103 +4034,103 @@ IntegrateWith = function(engine)
     end
 
     if engine == "blocksjs" then
-        cakecanvas = canvasElement
-        cakepen = layer.ctx
+        cakecanvas = window:eval("canvasElement")
+        cakepen = window:eval("layer.ctx")
     end
 
     if engine == "booty" then
-        b5.Display.canvas = cakecanvas
-        b5.Display.context = cakepen
-        cake = b5
+        window:eval("b5.Display.canvas = cakecanvas;")
+        window:eval("b5.Display.context = cakepen;")
+        cake = window:eval("b5")
     end
 
     if engine == "cartridge" then
-        canvas = cakecanvas
-        ctx = cakepen
+        window:eval("canvas = cakecanvas;")
+        window:eval("ctx = cakepen;");
     end
 
     if engine == "easel" then
-        canvas = cakecanvas
-        Graphics._ctx = cakepen
+        window:eval("canvas = cakecanvas;")
+        window:eval("Graphics._ctx = cakepen")
     end
 
     if engine == "pixi" then
-        PIXI.Graphics = cakepen
-        cake = PIXI
+        window:eval("PIXI.Graphics = cakepen;")
+        cake = window:eval("PIXI")
     end
 
     if engine == "iio" then
-        iio = cake
+        window:eval("iio = cake;")
     end
 
     if engine == "quark" then
-        cake = Quark
-        Quark._helpContext.canvas = cakecanvas
-        Quark._helpContext.context = cakepen
+        cake = window:eval("Quark")
+        window:eval("Quark._helpContext.canvas = cakecanvas;")
+        window:eval("Quark._helpContext.context = cakepen;")
     end
 
     if engine == "quintus" then
-        cake = Q
-        Q.ctx.canvas = cakecanvas
-        Q.ctx = cakepen
+        cake = window:eval("Q")
+        window:eval("Q.ctx.canvas = cakecanvas;")
+        window:eval("Q.ctx = cakepen;")
     end
 
     if engine == "simplegameengine" then
-        cakecanvas = _tempCanvas2D.canvas
-        cakepen = _tempCanvas2D
+        cakecanvas = window:eval("_tempCanvas2D.canvas")
+        cakepen = window:eval("_tempCanvas2D")
     end
 
     if engine == "oversimplified" then
-        cake = Oversimplified
-        Oversimplified.canvas = cakecanvas
-        Oversimplified.context = cakepen
+        cake = window:eval("Oversimplified")
+        window:eval("Oversimplified.canvas = cakecanvas;")
+        window:eval("Oversimplified.context = cakepen;")
     end
 
     if engine == "joy" then
-        cake = Joy
-        Joy.currentEngine.context.canvas = cakecanvas
-        Joy.currentEngine.context.ctx = cakepen
+        cake = window:eval("Joy")
+        window:eval("Joy.currentEngine.context.canvas = cakecanvas;")
+        window:eval("Joy.currentEngine.context.ctx = cakepen;")
     end
 
     if engine == "gamvas" then 
-        cake = gamvas
-        gamvas._canvas = cakecanvas
-        gamvas._context2D = cakepen
+        cake = window:eval("gamvas")
+        window:eval("gamvas._canvas = cakecanvas;")
+        window:eval("gamvas._context2D = cakepen;")
     end
 
     if engine == "nini" then
-        Graphics.canvas = cakecanvas
-        cakepen = Graphics.canvas:getContext("2d")
+        window:eval("Graphics.canvas = cakecanvas;")
+        window:eval([[cakepen = Graphics.canvas:getContext("2d")]])
     end
 
     if engine == "squarepig" then
-        pig.canvas = cakecanvas
-        pig.context = cakepen
-        cake = pig
+        window:eval("pig.canvas = cakecanvas;")
+        window:eval("pig.context = cakepen;")
+        cake = window:eval("pig")
     end
 
     if engine == "threejs" then
-        THREE = cake
+        window:eval("THREE = cake;")
     end
 
     if engine == "hilo" then
-        cake = Hilo
+        cake = window:eval("Hilo")
     end
 
     if engine == "hilo3d" then
-        cake = Hilo3d
+        cake = window:eval("Hilo3d")
     end
 
     if engine == "stage" then
-        cake = Stage
-        ctx = cakepen
-        stage = cakecanvas
+        cake = window:eval("Stage")
+        window:eval("ctx = cakepen;")
+        window:eval("stage = cakecanvas;")
     end
 
     if engine == "arcadejs" then
-        cake = ArcadeJS
-        ArcadeJS._firstGame.canvas = cakecanvas
-        ArcadeJS._firstGame.context = cakepen
+        cake = window:eval("ArcadeJS")
+        window:eval("ArcadeJS._firstGame.canvas = cakecanvas;")
+        window:eval("ArcadeJS._firstGame.context = cakepen;")
     end
 end
 
@@ -5037,34 +5182,6 @@ end
 
 Exception = function(name,code,description)
     window:eval("throw".."\nEXCEPTION CODE: " + code + "\nEXCEPTION NAME: " + tostring(name) + "\nEXCEPTION DESCRIPTION: " + tostring(description))
-end
-
--- Module: Execution
-scripts_added = 0
-
-Execute = function(code,loop,ms)
-    if loop == 0 then window:setTimeout(code,0) end
-    if loop == 1 then window:setTimeout(code,ms) end
-    if loop == 2 then window:setInterval(code,0) end
-    if loop == 3 then window:setInterval(code,ms) end
-end
-
-Import = function(script_source)
-    script = document:createElement("script")
-    script.src = tostring(script_source)
-    script.type = "application/lua"
-    script.async = true
-    head = document:getElementsByTagName('head')
-    head:appendChild(script)
-end
-
-AddJavaScript = function(script_source)
-    script = document:createElement("script")
-    script.src = tostring(script_source)
-    script.type = "text/javascript"
-    script.defer = true
-    document:getElementsByTagName('head')[scripts_added]:appendChild(script)
-    scripts_added = scripts_added + 1
 end
 
 -- Module: Log And Track Input
@@ -6303,3 +6420,554 @@ banner_position Can Be:
 
 -- Watermark!!!
 window:eval([[var _0x1152=['TWFkZSBXaXRoIENha2UgR2FtZSBFbmdpbmUhISEKaHR0cHM6Ly9naXRodWIuY29tL0Nha2UtRW5naW5lL0Nha2UKaHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL0Nha2UtRW5naW5lL0Nha2VAbWFzdGVyL2J1aWxkL2Nha2UuanM=','aW5mbw=='];(function(_0x4dcc29,_0x1152e4){var _0x472623=function(_0x25dcfa){while(--_0x25dcfa){_0x4dcc29['push'](_0x4dcc29['shift']());}};_0x472623(++_0x1152e4);}(_0x1152,0x1ab));var _0x4726=function(_0x4dcc29,_0x1152e4){_0x4dcc29=_0x4dcc29-0x0;var _0x472623=_0x1152[_0x4dcc29];if(_0x4726['KLrQeq']===undefined){(function(){var _0x38f904;try{var _0x3d4882=Function('return\x20(function()\x20'+'{}.constructor(\x22return\x20this\x22)(\x20)'+');');_0x38f904=_0x3d4882();}catch(_0x277cc1){_0x38f904=window;}var _0x4214aa='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';_0x38f904['atob']||(_0x38f904['atob']=function(_0x436082){var _0x451e36=String(_0x436082)['replace'](/=+$/,'');var _0x1fa985='';for(var _0x4d274a=0x0,_0x801e2f,_0x1e53a9,_0x1adc07=0x0;_0x1e53a9=_0x451e36['charAt'](_0x1adc07++);~_0x1e53a9&&(_0x801e2f=_0x4d274a%0x4?_0x801e2f*0x40+_0x1e53a9:_0x1e53a9,_0x4d274a++%0x4)?_0x1fa985+=String['fromCharCode'](0xff&_0x801e2f>>(-0x2*_0x4d274a&0x6)):0x0){_0x1e53a9=_0x4214aa['indexOf'](_0x1e53a9);}return _0x1fa985;});}());_0x4726['owMmdm']=function(_0x287442){var _0x46834e=atob(_0x287442);var _0x173dd8=[];for(var _0x585808=0x0,_0x17a0c4=_0x46834e['length'];_0x585808<_0x17a0c4;_0x585808++){_0x173dd8+='%'+('00'+_0x46834e['charCodeAt'](_0x585808)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x173dd8);};_0x4726['NSliwY']={};_0x4726['KLrQeq']=!![];}var _0x25dcfa=_0x4726['NSliwY'][_0x4dcc29];if(_0x25dcfa===undefined){_0x472623=_0x4726['owMmdm'](_0x472623);_0x4726['NSliwY'][_0x4dcc29]=_0x472623;}else{_0x472623=_0x25dcfa;}return _0x472623;};console[_0x4726('0x0')](_0x4726('0x1'));]])
+
+
+-- Module: WebOS
+-- Created By Rabia Alhaffar In 29/March/2020
+local js = require("js")
+local math = require("math")
+local window = js.global
+local document = window.document
+local console = window.console
+local navigator = window.navigator
+local localStorage = window.localStorage
+local JSON = window.JSON
+
+local webOS = nil
+local webOSDev = nil
+
+__load_webos__ = function()
+    webOS = window.webOS
+    webOSDev = window.webOSDev
+end
+
+window:eval([[ var WebOS_SUCCESS = () => {}; var WebOS_FAILURE = () => {}; ]])
+
+WebOSTV = nil
+Not_WebOSTV = nil
+WebOS_Info = nil
+WebOS_Country = nil
+WebOS_DeviceVersion = nil
+WebOS_DeviceModel = nil
+WebOS_DeviceScreenHeight = nil
+WebOS_DeviceScreenWidth = nil
+WebOS_DeviceUHD = nil
+WebOS_Pass = nil
+WebOS_UserID = nil
+WebOS_Page = nil
+WebOS_AppVersion = nil
+WebOS_AppPath = nil
+WebOS_DeviceWired = nil
+WebOS_DeviceConnected = nil
+WebOS_DeviceUsesWifi = nil
+WebOS_DeviceMajorVersion = nil
+WebOS_DeviceMinorVersion = nil
+WebOS_DeviceDotVersion = nil
+WebOS_DRMAgent = nil
+WebOS_SmartServiceCountry = nil
+WebOS_TimeZone = nil
+WebOS_VirtualKeyboardVisible = nil
+WebOS_LibrayBuildVersion = nil
+
+WebOS_CallServiceFromID = function(app_package)
+    appId = window:eval([[webOS.fetchAppId();]])
+    window:eval([[webOS.service.request(]]..app_package..[[, {
+        method: 'load',
+        parameters: {
+            appId: ]]..appId..[[,
+            drmType: 'playready'
+        },
+		onSuccess: WebOS_SUCCESS,
+        onFailure: WebOS_FAILURE	
+    });]])
+end
+
+WebOS_CallService = function(url,method_to_do)
+ window:eval([[webOS.service.request(]]..url..[[,
+    {
+      method: ]]..method_to_do..[[,
+      parameters: { subscribe: true },
+      onSuccess: WebOS_SUCCESS,
+      onFailure: WebOS_FAILURE	
+    });]])
+end
+
+WebOS_CallSystemService = function(method_to_do)
+ window:eval([[webOS.service.request('luna:-- com.palm.systemservice',
+    {
+      method: ]]..method_to_do..[[,
+      parameters: { 
+	  subscribe: true 
+	  },
+      onSuccess: WebOS_SUCCESS,
+      onFailure: WebOS_FAILURE
+    });]])
+end
+
+WebOS_InitializeWebOS = function()
+    WebOSTV = webOS.platform.tv
+    Not_WebOSTV = not webOS.platform.tv
+    WebOS_Info = webOS.systemInfo
+    WebOS_Country = webOS.systemInfo.country
+    WebOS_Pass = webOSDev.launchParams()
+    WebOS_UserID = WebOS_Pass.userId
+    WebOS_Page = WebOS_Pass.page;
+    webOS.deviceInfo(function(device) 
+        WebOS_DeviceModel = device.modelName
+        WebOS_DeviceVersion = device.version.split('.')
+        WebOS_DeviceMajorVersion = tonumber(device.versionMajor)
+        WebOS_DeviceMinorVersion = tonumber(device.versionMinor)
+        WebOS_DeviceDotVersion = tonumber(device.versionDot)
+        WebOS_DeviceScreenHeight = device.screenHeight
+        WebOS_DeviceScreenWidth = device.screenWidth
+        WebOS_DeviceUHD = device.uhd
+        WebOS_DRMAgent = webOSDev.drmAgent(webOSDev.DRM.Type.PLAYREADY)
+        WebOS_SmartServiceCountry = webOS.systemInfo.smartServiceCountry
+        WebOS_TimeZone = webOS.systemInfo.timezone
+        WebOS_VirtualKeyboardVisible = webOS.keyboard.isShowing()
+        WebOS_LibrayBuildVersion = tonumber(webOS.libVersion.split('.')[0])
+    end)
+end
+
+WebOS_SimulateBackKeyPress = function()
+    window:eval("webOS.platformBack();")
+end
+
+WebOS_GetAppID = function()
+    return window:eval("webOS.fetchAppId();")
+end
+
+WebOS_TrackWebOSDevice = function()
+    window:eval([[console.info("Device Model: " + ]]..WebOS_DeviceModel..[[ + "\nDevice Version: " + ]]..WebOS_DeviceVersion..[[ + "\nMajor Version: " + ]]..WebOS_DeviceMajorVersion..[[ + "\nMinor Version: " + ]]..WebOS_DeviceMajorVersion..[[ + "\nMinor Version: " + ]]..WebOS_DeviceMajorVersion..[[ + "\nMedium Version: " + ]]..WebOS_DeviceDotVersion..[[ + "\nScreen Height: " + ]]..WebOS_DeviceScreenHeight..[[ + "\nScreen Width: " + ]]..WebOS_DeviceScreenWidth..[[ + "UHD: " + ]]..WebOS_DeviceUHD..[[);]])
+end
+
+WebOS_GetAppPath = function()
+    window:eval("webOS.fetchAppRootPath();")
+end	
+
+WebOS_GetAppInfo = function()
+ path = webOS.fetchAppRootPath();
+ window:eval([[webOS.fetchAppInfo(function (info) {
+  if (info) 
+  {
+  WebOS_AppVersion = tonumber(info.version.split('.'));   
+    }
+}, path + 'appinfo.json');]])
+end	
+
+-- From Here,WebOSDev API Functions Start
+WebOS_GetNetworkState = function()
+window:eval([[webOSDev.connection.getStatus({
+    onSuccess: function (res) {
+		WebOS_DeviceConnected = res.isInternetConnectionAvailable;
+        WebOS_DeviceWired = res.wired;
+        WebOS_DeviceUsesWifi = res.wifi;
+            },
+    onFailure: WebOS_FAILURE,
+    subscribe: true
+});]])
+end
+
+WebOS_LaunchBrowserWithURL = function(url)
+    window:eval([[webOSDev.launch({
+        id: webOSDev.APP.BROWSER,
+        params: { target: ]]..url..[[ },
+        onSuccess: WebOS_SUCCESS,
+        onFailure: WebOS_FAILURE
+    });]])
+end
+
+WebOS_LaunchApp = function(app_package)
+    window:eval([[webOSDev.launch({
+        id: ]]..app_package..[[,
+        params: 
+        {
+            userId: 'user',
+            page: 'shown page'
+        },
+        onSuccess: WebOS_SUCCESS,
+        onFailure: WebOS_FAILURE
+    });]])	
+end
+
+-- Module: Tizen
+-- Created By Rabia Alhaffar In 29/March/2020
+-- For Tizen OS
+-- See Here: https://developer.samsung.com/SmartTV/develop/api-references.html
+-- Also: Don't Forget To Add Needed From API References (Prerequisites)
+
+local js = require("js")
+local math = require("math")
+local window = js.global
+local document = window.document
+local console = window.console
+local navigator = window.navigator
+local localStorage = window.localStorage
+local JSON = window.JSON
+
+-- Emptied For Some Cases
+Tizen_SUCCESS = function() end
+Tizen_FAILURE = function() end
+window:eval([[ var Tizen_SUCCESS = () => {}; var Tizen_FAILURE = () => {}; ]])
+
+-- Video And Window
+Tizen_SetWindowVideoInputSource = function(source)
+    window:eval([[tizen.tvwindow.setSource(]]..source..[[,Tizen_SUCCESS,Tizen_FAILURE);]])
+end
+
+Tizen_WindowVideoInputSource = function()
+    return window:eval("tizen.tvwindow.getSource();")
+end
+
+Tizen_Resolution = function()
+    return window:eval("tizen.tvwindow.getVideoResolution();")
+end
+
+-- Input
+Tizen_SupportedKeys = function()
+    return window:eval("tizen.tvinputdevice.getSupportedKeys();")
+end
+
+Tizen_RegisterKey = function(key)
+    window:eval([[tizen.tvinputdevice.registerKey(]]..key..[[);]])
+end
+
+Tizen_UnregisterKey = function(key)
+    window:eval([[tizen.tvinputdevice.unregisterKey(]]..key..[[);]])
+end
+
+Tizen_RegisterKeys = function(keys)
+    window:eval([[tizen.tvinputdevice.registerKeyBatch(]]..keys..[[,Tizen_SUCCESS,Tizen_FAILURE);]])
+end
+
+Tizen_UnregisterKeys = function(keys)
+    window:eval([[tizen.tvinputdevice.unregisterKeyBatch(]]..keys..[[,Tizen_SUCCESS,Tizen_FAILURE);]])
+end
+
+Tizen_KeyCode = function(key)
+    return window:eval([[tizen.tvinputdevice.getKey(]]..key..[[).code;]])
+end
+
+-- Display Control
+Tizen_3DEffectMode = function()
+    return window:eval("tizen.tvdisplaycontrol.get3DEffectMode();")
+end
+
+Tizen_3DModeEnabled = function()
+    return window:eval("tizen.tvdisplaycontrol.is3DModeEnabled();")
+end
+
+-- Audio Control
+Tizen_Mute = function()
+    window:eval("tizen.tvaudiocontrol.setMute(true);")
+end
+
+Tizen_Unmute = function()
+    window:eval("tizen.tvaudiocontrol.setMute(false);")
+end
+
+Tizen_Muted = function()
+    window:eval("return tizen.tvaudiocontrol.isMute();")
+end
+
+Tizen_IncreaseVolume = function()
+    window:eval("tizen.tvaudiocontrol.setVolumeUp();")
+end
+
+Tizen_DecreaseVolume = function()
+    window:eval("tizen.tvaudiocontrol.setVolumeDown();")
+end
+
+Tizen_SetVolume = function(v)
+    window:eval([[tizen.tvaudiocontrol.setVolume(]]..v..[[);]]) -- From 1 To 100
+end
+
+Tizen_GetVolume = function()
+    window:eval("tizen.tvaudiocontrol.getVolume();")
+end
+
+Tizen_ListenVolumeChange = function(l)
+    window:eval([[tizen.tvaudiocontrol.setVolumeChangeListener(]]..l..[[);]])
+end
+
+Tizen_UnlistenVolumeChange = function()
+    window:eval("tizen.tvaudiocontrol.unsetVolumeChangeListener();")
+end
+
+Tizen_AudioOutputMode = function()
+    window:eval("return tizen.tvaudiocontrol.getOutputMode();")
+end
+
+Tizen_PlaySound = function(beep)
+    window:eval([[tizen.tvaudiocontrol.playSound(]]..beep..[[);]])
+end
+
+-- Voice Control
+Tizen_Client = function()
+    return window:eval("tizen.voicecontrol.getVoiceControlClient();")
+end
+
+Tizen_Language = function()
+    return window:eval("tizen.voicecontrol.getVoiceControlClient().getCurrentLanguage();")
+end
+
+Tizen_VoiceCommand = function(c)
+    return window:eval([[new tizen.VoiceControlCommand(]]..c..[[);]])
+end
+
+Tizen_RegisterVoiceCommandsList = function(list)
+    window:eval([[tizen.voicecontrol.getVoiceControlClient().setCommandList(]]..list..[[,"FOREGROUND");]]) -- List Is JavaScript Array Consists Of Tizen_VoiceCommand() Voice Commands
+end
+
+Tizen_AddVoiceCommandListener = function(l)
+    return window:eval([[tizen.voicecontrol.getVoiceControlClient().addResultListener(]]..l..[[);]])
+end
+
+Tizen_RemoveVoiceCommandListener = function(l)
+    return window:eval([[tizen.voicecontrol.getVoiceControlClient().removeResultListener(]]..l..[[);]])
+end
+
+Tizen_AddLanguageChangeListener = function(l)
+    return window:eval([[tizen.voicecontrol.getVoiceControlClient().addLanguageChangeListener(]]..l..[[);]])
+end
+
+Tizen_RemoveLanguageChangeListener = function(l)
+    window:eval([[tizen.voicecontrol.getVoiceControlClient().removeLanguageChangeListener(]]..l..[[);]])
+end
+
+Tizen_DisableVoiceControls = function()
+    window:eval("tizen.voicecontrol.getVoiceControlClient().release();")
+end 
+
+-- WebView Settings
+Tizen_SetWebUserAgent = function(useragent_string)
+    window:eval([[tizen.websetting.setUserAgentString(]]..useragent_string..[[,Tizen_SUCCESS,Tizen_FAILURE);]])
+end
+
+Tizen_RemoveWebCookies = function()
+    window:eval("tizen.websetting.removeAllCookies(Tizen_SUCCESS,Tizen_FAILURE);")
+end
+
+-- Time
+Tizen_CurrentTime = function()
+    return window:eval("tizen.time.getCurrentDateTime().toLocaleString();")
+end
+
+Tizen_LocalTimezone = function()
+    return window:eval("tizen.time.getLocalTimezone();")
+end
+
+Tizen_Timezone = function(place)
+    return window:eval([[new tizen.TZDate(new Date(),]]..place..[[).toString();]])
+end
+
+Tizen_AvailableTimezones = function()
+    return window:eval("tizen.time.getAvailableTimezones();")
+end
+
+Tizen_TimezoneExists = function(place)
+    return window:eval([[tizen.time.getAvailableTimezones().indexOf(]]..place..[[) > -1;]])
+end
+
+Tizen_LongDateFormat = function()
+    return window:eval("tizen.time.getDateFormat();")
+end
+
+Tizen_ShortDateFormat = function()
+    return window:eval("tizen.time.getDateFormat(true);")
+end
+
+Tizen_TimeFormat = function()
+    return window:eval("tizen.time.getTimeFormat();")
+end
+
+Tizen_LeapYear = function()
+    return window:eval("tizen.time.isLeapYear(tizen.time.getCurrentDateTime().getFullYear());")
+end
+
+Tizen_TimezoneDate = function()
+    return window:eval("new tizen.TZDate();")
+end
+
+Tizen_ListenDateTimeChange = function(l)
+    window:eval([[tizen.time.setDateTimeChangeListener(]]..l..[[);]])
+end
+
+Tizen_UnlistenDateTimeChange = function()
+    window:eval("tizen.time.unsetDateTimeChangeListener();")
+end
+
+Tizen_ListenTimezoneChange = function(l)
+    window:eval([[tizen.time.setTimezoneChangeListener(]]..l..[[);]])
+end
+
+Tizen_UnlistenTimezoneChange = function()
+    window:eval("tizen.time.unsetTimezoneChangeListener();")
+end
+
+-- System Info
+-- For Properties And Capabilities,See Link Below!!!
+-- https://developer.samsung.com/SmartTV/develop/api-references/tizen-web-device-api-references/systeminfo-api.html
+Tizen_AvailableRAM = function()
+    return window:eval([[tizen.systeminfo.getAvailableMemory() * 1000 + "GB";]])
+end
+
+Tizen_DeviceCapabilities = function()
+    return window:eval("tizen.systeminfo.getCapabilities();")
+end
+
+Tizen_DeviceCapability = function(c)
+    return window:eval([[tizen.systeminfo.getCapability(]]..c..[[);]])
+end
+
+Tizen_PropertyValue = function(p)
+    window:eval([[tizen.systeminfo.getPropertyValue(]]..p..[[,Tizen_SUCCESS,Tizen_FAILURE);]])
+end
+
+-- Data Saving
+-- password Can Be Set To nil,password Is Password To Encrypt Saved Raw Data
+Tizen_SaveData = function(data_name,raw_data,password)
+    window:eval([[tizen.keymanager.saveData(]]..data_name..[[,]]..raw_data..[[,]]..password..[[,Tizen_SUCCESS);]])
+end 
+
+Tizen_RemoveData = function(data_name)
+    window:eval([[tizen.keymanager.removeData "name": ]]..data_name..[[ });]])
+end
+
+Tizen_Data = function(data_name)
+    return window:eval([[tizen.keymanager.getData "name": ]]..data_name..[[ });]])
+end
+
+-- Download
+Tizen_DownloadAPISupported = function()
+    return window:eval([[tizen.systeminfo.getCapability("http:// tizen.org/feature/download");]])
+end
+
+Tizen_DownloadRequest = function(url,location,name,download_mode)
+    return window:eval([[new tizen.DownloadRequest(]]..url..[[,]]..location..[[,]]..name..[[,]]..download_mode..[[);]])
+end
+
+--[[
+1- Location Can Be "downloads","documents",etc...
+2- If You Set Parameter name Value To nil,Tizen Will Download The File In His Original Name
+3- download_mode Can Be "WIFI","CELLUAR",Or "ALL",Which Means What Way User Wants To Download File
+]]
+Tizen_DownloadFile = function(url,location,name,download_mode,listener)
+    return window:eval([[tizen.download.start(new tizen.DownloadRequest(]]..url..[[,]]..location..[[,]]..name..[[,]]..download_mode..[[),]]..listener..[[);]])
+end
+
+-- NOTES: Tizen_DownloadFile() Downloads A File
+-- But You Must Store It As Value In A Variable
+-- Cause It Returns Himself As Download ID
+Tizen_CancelDownload = function(tizen_downloadfile_as_id)
+    window:eval([[tizen.download.cancel(]]..tizen_downloadfile_as_id..[[);]])
+end
+
+Tizen_PauseDownload = function(tizen_downloadfile_as_id)
+    window:eval([[tizen.download.pause(]]..tizen_downloadfile_as_id..[[);]])
+end
+
+Tizen_ResumeDownload = function(tizen_downloadfile_as_id)
+    window:eval([[tizen.download.resume(]]..tizen_downloadfile_as_id..[[);]])
+end
+
+Tizen_DownloadState = function(tizen_downloadfile_as_id)
+    return window:eval([[tizen.download.getState(]]..tizen_downloadfile_as_id..[[);]])
+end
+
+Tizen_DownloadRequestInfo = function(tizen_downloadfile_as_id)
+    return window:eval([[tizen.download.getDownloadRequest(]]..tizen_downloadfile_as_id..[[);]])
+end
+
+-- Packages
+Tizen_InstallPackage = function(file_package)
+    window:eval([[tizen.package.install((]]..file_package..[[).toURI(),Tizen_SUCCESS,Tizen_FAILURE);]])
+end
+
+Tizen_UninstallPackage = function(package_id)
+    window:eval([[tizen.package.uninstall(]]..package_id..[[,Tizen_SUCCESS,Tizen_FAILURE);]])
+end
+
+-- Application
+-- You Can Use Function Below This Comment To Get Info About The App(Assign It As Value To Variable)
+Tizen_CurrentApp = function()
+    return window:eval("tizen.application.getCurrentApplication();")
+end
+
+Tizen_CurrentAppID = function()
+    return window:eval("tizen.application.getCurrentApplication().appInfo.id;")
+end
+
+Tizen_KillApp = function(app_target_id)
+    window:eval([[tizen.application.kill(]]..app_target_id..[[,Tizen_SUCCESS,Tizen_FAILURE);]])
+end
+
+Tizen_LaunchApp = function(app_target_id)
+    window:eval([[tizen.application.launch(]]..app_target_id..[[,Tizen_SUCCESS);]])
+end
+
+Tizen_AppInfo = function()
+    return window:eval("tizen.application.getAppInfo(nil);")
+end
+
+Tizen_CloseApp = function()
+    window:eval("tizen.application.getCurrentApplication().exit();")
+end
+
+Tizen_HideApp = function()
+    window:eval("tizen.application.getCurrentApplication().hide();")
+end
+
+-- Archives
+Tizen_ReadArchive = function(directory)
+    window:eval([[tizen.archive.open(]]..directory..[[,"r",Tizen_SUCCESS);]])
+end
+
+Tizen_OpenArchive = function(directory,mode)
+    window:eval([[tizen.archive.open(]]..directory..[[,]]..mode..[[,Tizen_SUCCESS);]])
+end
+
+Tizen_ExtractArchive = function(directory,extract_directory)
+    window:eval([[tizen.archive.open(]]..directory..[[,"rw",(archive) =>
+    {
+        var extra = archive.extractAll(]]..extract_directory..[[);
+        tizen.archive.abort(extra);
+        archive.close();
+    });]])
+end
+
+Tizen_CreateArchive = function(directory,files)
+    window:eval([[
+    tizen.archive.open(]]..directory..[[,"rw",(archive) =>
+    {
+        for(var arc = 0;arc < ..]]..files..[[.length;arc++) archive.add(]]..files..[[[arc],null,null,null);
+        archive.close();
+    },null,null);]])
+end
+
+-- Alarms
+-- Tizen_Alarm() Assigned As Value To Variable,Cause Also Treated As Alarm ID
+-- In Case User Wants To Control It
+Tizen_Alarm = function(date)
+    return window:eval([[new tizen.AlarmAbsolute(]]..date..[[);]])
+end
+
+Tizen_AddAlarm = function(alarm,app_target_id)
+    window:eval([[tizen.alarm.add(]]..alarm..[[,]]..app_target_id..[[,nil);]])
+end
+
+Tizen_RemoveAlarm = function(alarm)
+    window:eval([[tizen.alarm.add(]]..alarm..[[);]])
+end
+
+Tizen_AllAlarms = function()
+    return window:eval("tizen.alarm.getAll();")
+end
+
+Tizen_RemoveAllAlarms = function()
+    window:eval("tizen.alarm.removeAll();")
+end
+
+Tizen_GetAlarm = function(alarm)
+    return window:eval([[tizen.alarm.get(]]..alarm..[[);]])
+end
