@@ -73,10 +73,8 @@ SetShadowProperties = function(shadowOffsetX,shadowOffsetY,shadowcolor,shadowblu
     cakepen.shadowBlur = shadowblur
 end
 
-SetLineProperties = function(line_width,line_height)
-    if Unknown(line_height) then line_height = 1 end
+SetLineProperties = function(line_width)
     if Unknown(line_width) then line_width = 1 end
-    cakepen.lineHeight = line_height
     cakepen.lineWidth = line_width
 end
 
@@ -348,7 +346,7 @@ Transform = function(a,b,mode)
     if mode == "scale" then cakepen:scale(a,b) end
 end
 
-RemoveAlpha = function()
+ClearAlpha = function()
     cakepen.globalAlpha = 0
 end
 
@@ -676,6 +674,7 @@ DrawEllipse = function(x,y,radius,color,stroke_color,rotation,start_angle,end_an
     cakepen.strokeStyle = stroke_color
 	cakepen:ellipse(x,y,radius,radius,rotation,start_angle,end_angle * math.pi,false)
 end
+
 Cut = function()
     cakepen:clip()
 end	
@@ -1151,6 +1150,10 @@ Shear = function(x,y)
 	cakepen:shear(x,y)
 end
 
-ClearShadows = function()
-	if Safari then cakepen:clearShadow() end
+SetCanvasBackground = function(bg)
+    cakecanvas.style.background = bg
+end
+
+RemoveCanvasBackground = function()
+    cakecanvas.style.background = "none"
 end
