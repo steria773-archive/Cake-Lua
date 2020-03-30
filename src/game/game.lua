@@ -28,7 +28,7 @@ end
 StartProcess = function(dir)
     window:open("file:///"..tostring(dir))
 end
-UpdateCake = function()
+UpdateEngine = function()
     cake_engine = document:createElement("script")
     cake_engine.src = "https://cdn.jsdelivr.net/gh/Cake-Engine/Cake@master/build/cake.js"
     cake_engine.type = 'text/javascript'
