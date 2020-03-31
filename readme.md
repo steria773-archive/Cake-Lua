@@ -8,6 +8,8 @@ This Is The Lua Binding Of [Cake](https://github.com/Cake-Engine/Cake),A HTML5 G
 ```html
 <script src="fengari-web.js"></script>
 <script src="lightgl.js"></script>
+<script src="webOSTV.js"></script>
+<script src="webOSTV-dev.js"></script>
 <script src="cake.lua" type="application/lua" async></script>
 ```
 4. Let's Create A Game File Named `game.lua` With Following:
