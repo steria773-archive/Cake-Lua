@@ -10,6 +10,7 @@ local JSON = window.JSON
 
 PlayVideo = function(src)
     video = window.document:createElement("video")
+    video.style.visibility = "visible"
     video.src = src
     video.loop = false
     cakepen:drawImage(video,0,0,cakecanvas.width,cakecanvas.height)
@@ -23,6 +24,7 @@ function Video:new(src)
     setmetatable(Video, self)
     self.src = src
     self.video = window.document:createElement("video")
+    self.video.style.visibility = "visible"
     self.video.src = self.src
     self.video.src = self.src
     self.video.loop = false
