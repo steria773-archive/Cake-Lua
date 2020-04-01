@@ -2194,6 +2194,7 @@ end
 PlayVideo = function(src)
     video = window.document:createElement("video")
     video.src = src
+    video.style.visibility = "visible"
     video.loop = false
     cakepen:drawImage(video,0,0,cakecanvas.width,cakecanvas.height)
     video.onended = function()
@@ -2206,6 +2207,7 @@ function Video:new(src)
     setmetatable(Video, self)
     self.src = src
     self.video = window.document:createElement("video")
+    self.video.style.visibility = "visible"
     self.video.src = self.src
     self.video.src = self.src
     self.video.loop = false
